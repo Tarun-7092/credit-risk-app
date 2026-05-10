@@ -1,7 +1,7 @@
 streamlit==1.32.2
 pandas==2.2.1
 numpy==1.26.4
-scikit-learn==1.4.1.post1
+scikit-learn
 matplotlib==3.8.3
 shap==0.44.1
 numba==0.59.0
