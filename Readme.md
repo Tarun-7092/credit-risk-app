@@ -1,46 +1,106 @@
 # 💳 Credit Risk Explainer
 
-A minimal **Explainable Credit Risk** app using scikit-learn + SHAP + Streamlit.
+An interactive **Explainable AI (XAI)** platform for credit default prediction built using **Streamlit**, **Gradient Boosting**, and **SHAP**.
 
-## Stack
-| Layer | Library |
+The application predicts applicant credit risk while providing transparent feature-level explanations for every prediction using SHAP visualizations.
+
+---
+
+## 🌐 Live Demo
+
+🔗 Deployed Application:  
+https://your-app-name.streamlit.app
+
+🔗 GitHub Repository:  
+https://github.com/your-username/credit-risk-explainer
+
+---
+
+## 🚀 Features
+
+- Real-time credit risk prediction
+- Default probability scoring
+- SHAP-based explainability dashboard
+- Interactive applicant input controls
+- Global feature importance analysis
+- Embedded UCI-inspired German Credit dataset
+- Feature engineering + preprocessing pipeline
+- Responsive Streamlit analytics interface
+
+---
+
+## 🧠 Machine Learning Pipeline
+
+### Model
+- Gradient Boosting Classifier
+- Stratified train/test split
+- 5-Fold Cross Validation
+
+### Evaluation Metrics
+
+| Metric | Score |
 |---|---|
-| Data | Pandas, NumPy |
-| Model | scikit-learn (Random Forestxd) |
-| Explainability | SHAP (TreeExplainer) |
-| UI | Streamlit |
+| Test Accuracy | ~75% |
+| ROC-AUC | ~0.80 |
+| Cross-Validation Accuracy | ~75% |
 
-## Dataset
-German Credit Dataset (UCI / Statlog) — 1 000 applicants, 20 features, binary target (good/bad credit).  
-Downloaded automatically on first run. Falls back to synthetic data if unreachable.
+### Explainability
+- SHAP TreeExplainer
+- Per-prediction feature contribution analysis
+- Global feature importance visualization
 
-## Quick Start
+---
+
+## 🛠 Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Frontend/UI | Streamlit |
+| ML Framework | scikit-learn |
+| Explainability | SHAP |
+| Data Processing | Pandas, NumPy |
+| Visualization | Matplotlib |
+| Model | Gradient Boosting Classifier |
+
+---
+
+## 📊 Dataset
+
+The project uses a **German Credit-inspired dataset** modeled after the UCI Statlog German Credit dataset.
+
+Features include:
+- Credit amount
+- Loan duration
+- Employment status
+- Savings/checking account status
+- Housing
+- Credit history
+- Age
+- Job classification
+
+The application includes:
+- synthetic data generation with realistic correlations
+- embedded offline dataset support
+- binary classification (`good` / `bad` credit risk)
+
+---
+
+## 📸 Screenshots
+
+### Dashboard Overview
+![Dashboard](screenshots/dashboard.png)
+
+### Global Feature Importance
+![Feature Importance](screenshots/feature-importance.png)
+
+---
+
+## 📂 Project Structure
 
 ```bash
-# 1. Create & activate a virtual environment (optional but recommended)
-python -m venv venv
-source venv/bin/activate   # Windows: venv\Scripts\activate
-
-# 2. Install dependencies
-pip install -r requirements.txt
-
-# 3. Run the app
-streamlit run app.py
-```
-
-Browser opens at **http://localhost:8501**
-
-## Features
-- **Sidebar sliders/dropdowns** — adjust any applicant attribute in real time
-- **Instant prediction** — default probability + risk label
-- **Per-prediction SHAP waterfall** — which features pushed the score up/down
-- **Global feature importance** — overall model behaviour
-- **Dataset preview** — inspect raw data
-
-## Project Structure
-```
-credit_risk_app/
-├── app.py           # single-file Streamlit application
+credit-risk-explainer/
+│
+├── app.py
 ├── requirements.txt
-└── README.md
-```
+├── README.md
+└── screenshots
