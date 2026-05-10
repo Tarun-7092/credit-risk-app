@@ -12,7 +12,7 @@ The application predicts applicant credit risk while providing transparent featu
 https://your-app-name.streamlit.app
 
 🔗 GitHub Repository:  
-https://github.com/your-username/credit-risk-explainer
+https://github.com/Tarun-7092/credit-risk-app
 
 ---
 
